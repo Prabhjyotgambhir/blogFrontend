@@ -1,0 +1,14 @@
+<h3 class="text-center">
+  Create Post</h3>
+<form class="full-width" [formGroup]="postFormGroup" (ngSubmit)="createPost()">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Title of Post" [(ngModel)]="post.title" formControlName="title">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <textarea matInput placeholder="Body of post" [(ngModel)]="post.body" formControlName="body"></textarea>
+  </mat-form-field>
+  <div class="text-right">
+    <button mat-button type="submit">SUBMIT</button>
+    <button mat-button>CANCEL</button>
+  </div>
+</form>
