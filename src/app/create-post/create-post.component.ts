@@ -1,5 +1,5 @@
+import { PostService } from './../services/post.service';
 import { Post } from './../models/post';
-import { CreatepostService } from './createpost.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatSnackBar, MatDialogRef } from '@angular/material';
@@ -11,7 +11,7 @@ import { MatSnackBar, MatDialogRef } from '@angular/material';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor(private createPostService: CreatepostService, public snackBar: MatSnackBar,
+  constructor(private postService: PostService, public snackBar: MatSnackBar,
               public dialogRef: MatDialogRef<CreatePostComponent>) { }
   post: Post;
   postFormGroup: FormGroup;
@@ -25,7 +25,7 @@ export class CreatePostComponent implements OnInit {
 
   createPost() {
     this.post.author = 'Prabhjyot';
-    this.createPostService.createPost(this.post).subscribe(
+    this.postService.createPost(this.post).subscribe(
       (response) => {
         this.dialogRef.close();
         this.snackBar.open('Post created successfully', '', {
@@ -33,6 +33,6 @@ export class CreatePostComponent implements OnInit {
         });
       }
     );
-  };
+  }
 
 }

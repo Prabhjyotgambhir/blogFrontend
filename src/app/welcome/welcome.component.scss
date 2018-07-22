@@ -1,4 +1,5 @@
-.welcome {
+mat-card {
+    max-width: 200px;
     position: absolute;
     right: 0;
     left: 0;
@@ -7,5 +8,4 @@
     margin: auto;
     height: max-content;
     z-index: 2;
-    max-width: 400px;
 }

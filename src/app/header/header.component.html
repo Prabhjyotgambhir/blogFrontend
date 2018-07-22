@@ -3,7 +3,7 @@
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-form-field class="search-form-field" floatPlaceholder="never" color="accent">
+    <mat-form-field class="search-form-field" floatPlaceholder="never" color="accent" [style.width.%]="mobileQuery.matches ? 100 : 50">
         <input matInput type="text" placeholder="Search Categories, User, Post" [(ngModel)]="value">
         <button mat-button *ngIf="!value" matSuffix mat-icon-button aria-label="Search">
           <mat-icon>search</mat-icon>
@@ -14,7 +14,7 @@
       </mat-form-field>
   </mat-toolbar>
 
-  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list>
         <div class="side-content">
@@ -40,5 +40,8 @@
 
       </mat-nav-list>
     </mat-sidenav>
+    <router-outlet></router-outlet>
   </mat-sidenav-container>
 </div>
+
+

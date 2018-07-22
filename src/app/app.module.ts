@@ -1,6 +1,11 @@
+import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+// Services
+import { PostService } from './services/post.service';
 
 
 import { AppComponent } from './app.component';
@@ -41,12 +46,22 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { CardComponent } from './home/card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreatePostComponent,
+    WelcomeComponent,
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -84,9 +99,16 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  entryComponents: [
+    CreatePostComponent
+  ],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
