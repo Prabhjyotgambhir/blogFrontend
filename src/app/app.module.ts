@@ -11,6 +11,7 @@ import { PostService } from './services/post.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 // Material modules
 import {
   MatAutocompleteModule,
@@ -52,6 +53,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './home/card/card.component';
+import { MainAdvertComponent } from './main-advert/main-advert.component';
 
 
 @NgModule({
@@ -61,7 +63,8 @@ import { CardComponent } from './home/card/card.component';
     CreatePostComponent,
     WelcomeComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    MainAdvertComponent
   ],
   imports: [
     BrowserModule,
@@ -101,13 +104,13 @@ import { CardComponent } from './home/card/card.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   entryComponents: [
     CreatePostComponent
   ],
   providers: [
-    PostService
+    PostService,
   ],
   bootstrap: [AppComponent]
 })

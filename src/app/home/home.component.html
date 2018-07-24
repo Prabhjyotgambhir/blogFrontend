@@ -1,3 +1,5 @@
+<app-main-advert></app-main-advert>
+
 <div class="container" [style.margin.px]="mobileQuery.matches ? 0 : 32">
   <div *ngFor="let post of postList" [ngClass]="postStyles">
     <app-card [post]="post"></app-card>

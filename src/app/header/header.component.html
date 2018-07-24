@@ -4,37 +4,42 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-form-field class="search-form-field" floatPlaceholder="never" color="accent" [style.width.%]="mobileQuery.matches ? 100 : 50">
-        <input matInput type="text" placeholder="Search Categories, User, Post" [(ngModel)]="value">
-        <button mat-button *ngIf="!value" matSuffix mat-icon-button aria-label="Search">
-          <mat-icon>search</mat-icon>
-        </button>
-        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
+      <input matInput type="text" placeholder="Search Categories, User, Post" [(ngModel)]="value">
+      <button mat-button *ngIf="!value" matSuffix mat-icon-button aria-label="Search">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list>
         <div class="side-content">
-          <button class="full-width full-height" mat-button>
+          <button class="full-width full-height" mat-button [routerLink]="['/']">
             Home
           </button>
         </div>
         <div class="side-content">
-          <button class="full-width full-height" mat-button>
-            My Posts
+          <button class="full-width full-height" mat-button [routerLink]="['/myposts']">
+            About Me
           </button>
         </div>
         <div class="side-content">
-          <button class="full-width full-height" mat-button>
+          <button class="full-width full-height" mat-button [routerLink]="['/categories']">
             Categories
           </button>
         </div>
         <div class="side-content">
-          <button class="full-width full-height" mat-button>
-            My Friends
+          <button class="full-width full-height" mat-button [routerLink]="['/projects']">
+            My Tech Projects
+          </button>
+        </div>
+        <div class="side-content">
+          <button class="full-width full-height" mat-button [routerLink]="['/projects']">
+            My Food Love
           </button>
         </div>
 
@@ -43,5 +48,3 @@
     <router-outlet></router-outlet>
   </mat-sidenav-container>
 </div>
-
-
