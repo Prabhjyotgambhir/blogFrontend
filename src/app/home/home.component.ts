@@ -21,10 +21,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   private _mobileQueryListener: () => void;
 
   ngOnInit() {
-    this.postStyles = {
-      'card-in-web': !this.mobileQuery.matches,
-      'card-in-mob': this.mobileQuery.matches
-    };
     this.getAllPosts();
   }
 

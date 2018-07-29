@@ -1,0 +1,18 @@
+.about-container {
+    padding: 32px;
+}
+
+.about-content {
+    img {
+        width: 80px;
+        border-radius: 100%;
+        border: 4px solid #F6F9FC;
+    }    
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+}

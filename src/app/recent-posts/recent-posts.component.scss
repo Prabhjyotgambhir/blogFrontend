@@ -1,0 +1,55 @@
+h5 {
+    margin-bottom: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+time {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #5D738D;
+    letter-spacing: 1px;
+    padding-left: 4px;
+}
+
+.p-32 {
+    padding: 32px 0px;
+    border-top: 1px solid #EBF1F8;
+}
+
+.set-table {
+    display: table;
+    padding-left: 8px;
+    time, mat-icon {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    mat-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        color: #5D738D;
+    }
+}
+
+.col-3 {
+    padding: 0;
+}
+
+.p-16 {
+    padding: 16px;
+    border-bottom: 1px solid #EBF1F8;
+}
+
+.wrap-content {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+img {
+    height: 50px;
+}

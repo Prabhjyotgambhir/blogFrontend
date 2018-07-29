@@ -54,6 +54,11 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './home/card/card.component';
 import { MainAdvertComponent } from './main-advert/main-advert.component';
+import { PostContentComponent } from './post-content/post-content.component';
+import { AboutComponent } from './about/about.component';
+import { RecentPostsComponent } from './recent-posts/recent-posts.component';
+import { CardHomeComponent } from './card-home/card-home.component';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
@@ -64,7 +69,12 @@ import { MainAdvertComponent } from './main-advert/main-advert.component';
     WelcomeComponent,
     HomeComponent,
     CardComponent,
-    MainAdvertComponent
+    MainAdvertComponent,
+    PostContentComponent,
+    AboutComponent,
+    RecentPostsComponent,
+    CardHomeComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
