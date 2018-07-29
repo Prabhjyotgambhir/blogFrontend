@@ -59,6 +59,7 @@ import { AboutComponent } from './about/about.component';
 import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 import { CardHomeComponent } from './card-home/card-home.component';
 import { ContentComponent } from './content/content.component';
+import { InstagramComponent } from './instagram/instagram.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { ContentComponent } from './content/content.component';
     AboutComponent,
     RecentPostsComponent,
     CardHomeComponent,
-    ContentComponent
+    ContentComponent,
+    InstagramComponent
   ],
   imports: [
     BrowserModule,
