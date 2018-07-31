@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CreatePostComponent } from './../create-post/create-post.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -9,7 +10,7 @@ import { MatDialog } from '@angular/material';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,5 +19,9 @@ export class WelcomeComponent implements OnInit {
     const dialogRef = this.dialog.open(CreatePostComponent, {
       width: '400px',
     });
+  }
+
+  home() {
+    this.router.navigateByUrl('');
   }
 }

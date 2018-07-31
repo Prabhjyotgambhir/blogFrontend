@@ -2,13 +2,22 @@
   Create Post</h3>
 <form class="full-width" [formGroup]="postFormGroup" (ngSubmit)="createPost()">
   <mat-form-field class="full-width">
-    <input matInput placeholder="Title of Post" [(ngModel)]="post.title" formControlName="title">
+    <input matInput placeholder="Title of Post" [(ngModel)]="post.title" formControlName="title" required>
   </mat-form-field>
   <mat-form-field class="full-width">
-    <textarea matInput placeholder="Body of post" [(ngModel)]="post.body" formControlName="body"></textarea>
+    <textarea matInput placeholder="Body of post" [(ngModel)]="post.body" formControlName="body" required></textarea>
   </mat-form-field>
+  <div class="full-width">
+    <button (click)="fileInput.click()" mat-button type="button">
+      <mat-icon>cloud_upload</mat-icon>
+      <span>Choose Image </span>
+      <input mat-Input #fileInput type="file" (change)="handleFileInput($event)" style="display:none;" required/>
+    </button>
+    <span>{{file?.name}}</span>
+  </div>
   <div class="text-right">
-    <button mat-button type="submit">SUBMIT</button>
-    <button mat-button>CANCEL</button>
+    <button mat-button type="submit" [disabled]="postSaved"><mat-spinner *ngIf="postSaved"></mat-spinner>
+    SUBMIT</button>
+    <button mat-button type="button" (click)="cancel()">CANCEL</button>
   </div>
 </form>

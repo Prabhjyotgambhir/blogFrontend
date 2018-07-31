@@ -1,9 +1,4 @@
 
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-
   .title {
     font-weight: bold;
   }
@@ -19,4 +14,9 @@
 mat-card {
   box-shadow: unset !important;
   margin: 16px 0px;
+}
+
+img {
+  max-height: 400px;
+  max-width: 100%;
 }

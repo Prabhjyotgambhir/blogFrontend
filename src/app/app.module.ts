@@ -60,6 +60,10 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 import { CardHomeComponent } from './card-home/card-home.component';
 import { ContentComponent } from './content/content.component';
 import { InstagramComponent } from './instagram/instagram.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { PopularPostsComponent } from './popular-posts/popular-posts.component';
+import { SignupComponent } from './signup/signup.component';
+import { ReadmoreComponent } from './readmore/readmore.component';
 
 
 @NgModule({
@@ -76,7 +80,11 @@ import { InstagramComponent } from './instagram/instagram.component';
     RecentPostsComponent,
     CardHomeComponent,
     ContentComponent,
-    InstagramComponent
+    InstagramComponent,
+    CategoriesComponent,
+    PopularPostsComponent,
+    SignupComponent,
+    ReadmoreComponent
   ],
   imports: [
     BrowserModule,

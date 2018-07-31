@@ -1,0 +1,15 @@
+mat-spinner {
+    width: 16px !important;
+    height: 16px !important;
+    position: absolute;
+    top: 20%;
+}
+
+:host /deep/ svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+button {
+    width: 130px !important;
+}

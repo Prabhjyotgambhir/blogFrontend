@@ -56,3 +56,14 @@ body {
 .no-margin {
     margin: 0 !important;
 }
+
+
+.wrap-content {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+mat-sidenav-content {
+ overflow: unset !important;
+}

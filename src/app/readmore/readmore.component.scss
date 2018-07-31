@@ -1,0 +1,27 @@
+h6 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+p {
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+button {
+    border-radius: 5%;
+    &:hover {
+        background-color: red;
+        color: white;
+        transition: 1s;
+    }
+}
+
+.container {
+    padding: 12px 0px;
+}
+
+img {
+    max-height: 150px;
+}

@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="left-section col-8">
-        <app-home></app-home>
+      <app-home></app-home>
+      <hr>
+      <div *ngFor="let post of posts">
+        <app-readmore [post]="post"></app-readmore>
+      </div>
     </div>
     <div class="right-section text-center col-4">
       <app-about></app-about>

@@ -6,4 +6,5 @@ export class Post {
     createdAt: Date;
     updatedAt: Date;
     author: String;
+    postImage: String;
 }
